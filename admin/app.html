@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div>
+          <h1>Admin Console</h1>
+          <p>Manage your portfolio content securely.</p>
+        </div>
+        <div class="header-actions">
+          <button id="sign-out" class="btn secondary hidden">Sign out</button>
+        </div>
+      </header>
+
+      <section id="auth-section" class="card">
+        <h2>Sign in</h2>
+        <form id="login-form">
+          <label>
+            Email
+            <input type="email" id="login-email" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="login-password" required />
+          </label>
+          <button type="submit" class="btn primary">Sign in</button>
+          <p id="login-status" class="status"></p>
+        </form>
+      </section>
+
+      <section id="editor-section" class="hidden">
+        <div class="toolbar">
+          <button id="save-btn" class="btn primary">Save changes</button>
+          <button id="restore-btn" class="btn secondary">Restore last version</button>
+          <span id="save-status" class="status"></span>
+        </div>
+
+        <div class="grid">
+          <section class="card">
+            <h2>Profile</h2>
+            <label>Name <input type="text" id="profile-name" /></label>
+            <label>Degree <input type="text" id="profile-degree" /></label>
+            <label>Role <input type="text" id="profile-role" /></label>
+          </section>
+
+          <section class="card">
+            <h2>About</h2>
+            <label>About text
+              <textarea id="about-text" rows="5"></textarea>
+            </label>
+          </section>
+        </div>
+
+        <section class="card">
+          <h2>Hero</h2>
+          <label>Eyebrow <input type="text" id="hero-eyebrow" /></label>
+          <label>Headline <input type="text" id="hero-headline" /></label>
+          <label>Subtitle <textarea id="hero-subtitle" rows="3"></textarea></label>
+          <label>Primary CTA Label <input type="text" id="hero-cta-primary-label" /></label>
+          <label>Primary CTA Link <input type="text" id="hero-cta-primary-href" /></label>
+          <label>Secondary CTA Label <input type="text" id="hero-cta-secondary-label" /></label>
+          <label>Secondary CTA Link <input type="text" id="hero-cta-secondary-href" /></label>
+        </section>
+
+        <section class="card">
+          <h2>Metrics</h2>
+          <div id="metrics-list"></div>
+          <button id="add-metric" class="btn tertiary">Add metric</button>
+        </section>
+
+        <section class="card">
+          <h2>Quick Facts</h2>
+          <div id="facts-list"></div>
+          <button id="add-fact" class="btn tertiary">Add fact</button>
+        </section>
+
+        <section class="card">
+          <h2>Skills</h2>
+          <div id="skills-list"></div>
+          <button id="add-skill" class="btn tertiary">Add skill</button>
+        </section>
+
+        <section class="card">
+          <h2>Projects</h2>
+          <div id="projects-list"></div>
+          <button id="add-project" class="btn tertiary">Add project</button>
+        </section>
+
+        <section class="card">
+          <h2>Experience</h2>
+          <div id="experience-list"></div>
+          <button id="add-experience" class="btn tertiary">Add experience</button>
+        </section>
+
+        <section class="card">
+          <h2>Contacts</h2>
+          <div id="contacts-list"></div>
+          <button id="add-contact" class="btn tertiary">Add contact</button>
+        </section>
+
+        <section class="card">
+          <h2>Custom Sections</h2>
+          <div id="sections-list"></div>
+          <button id="add-section" class="btn tertiary">Add section</button>
+        </section>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../config.js"></script>
+    <script src="app.js"></script>
+  </body>
+  </html>

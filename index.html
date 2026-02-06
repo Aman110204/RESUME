@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aman Kumar &mdash; Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar container">
+    <div class="brand">
+      <span class="brand-name gradient-text">Aman Kumar</span>
+      <span class="brand-role typewriter" data-text="Information Science Engineer - Frontend & Full-stack"></span>
+    </div>
+    <nav class="navlinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a class="resume-btn" href="resume.pdf" download><i class="fa-regular fa-file-lines"></i> Resume</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero section reveal">
+      <div class="hero-content glass">
+        <p class="hero-eyebrow" id="hero-eyebrow">Portfolio</p>
+        <h1 id="hero-headline">Aman Kumar - Information Science Engineer</h1>
+        <p class="hero-subtitle" id="hero-subtitle">Building reliable, user-focused web products with clean engineering and polished design.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="resume-btn">View Projects</a>
+          <a href="resume.pdf" download class="ghost-btn">Download Resume</a>
+        </div>
+        <div class="hero-metrics" id="hero-metrics"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="about-grid">
+        <figure class="profile-card flip-card" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="1.jpg" alt="Aman Kumar" class="avatar">
+            </div>
+            <div class="flip-card-back">
+              <img src="2.jpg" alt="Aman Kumar Alternate" class="avatar">
+            </div>
+          </div>
+          <figcaption>
+            <h2 id="profile-name">Aman Kumar</h2>
+            <p class="muted" id="profile-degree">B.E &mdash; Information Science</p>
+          </figcaption>
+        </figure>
+        <article class="about-text glass">
+          <h3>About Me</h3>
+          <p id="about-text">Hi &mdash; I am Aman Kumar. I can build elegant and efficient web experiences with strong engineering. I hold a B.E in Information Science and enjoy working across frontend, backend, and automation projects. I like to blend a corporate polish with subtle futuristic touches.</p>
+          <ul class="quick-facts" id="quick-facts"></ul>
+          <div class="resume-container">
+            <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <h3>Skills</h3>
+      <div class="skills-grid" id="skills-grid"></div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <h3>Selected Projects</h3>
+      <div class="card-container" id="projects-grid"></div>
+    </section>
+
+    <section id="experience" class="section reveal">
+      <h3>Experience</h3>
+      <div class="timeline" id="experience-list"></div>
+    </section>
+    <section id="contact" class="section reveal">
+      <h3>Contact</h3>
+     <div class="contact-cards" id="contact-cards"></div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <small>&copy; 2026 Aman Kumar &mdash; Built with a pastel, futuristic palette.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

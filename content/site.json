@@ -1,0 +1,105 @@
+{
+  "profile": {
+    "name": "Aman Kumar",
+    "degree": "B.E - Information Science",
+    "role": "Information Science Engineer - Frontend & Full-stack"
+  },
+  "hero": {
+    "eyebrow": "Entry-level Software Engineer",
+    "headline": "Backend-leaning full-stack engineer with hands-on industry experience",
+    "subtitle": "Built and maintained applications with JavaScript, Node.js, React, MongoDB, and SQL. Strong fundamentals in Data Structures and Java. Seeking a Junior Software Engineer role in backend or full-stack development.",
+    "primaryCtaLabel": "View Projects",
+    "primaryCtaHref": "#projects",
+    "secondaryCtaLabel": "Download Resume",
+    "secondaryCtaHref": "resume.pdf"
+  },
+  "metrics": [
+    { "value": "1", "label": "Industry internship" },
+    { "value": "4+", "label": "Projects delivered" },
+    { "value": "6+", "label": "Core technologies" }
+  ],
+  "aboutText": "Hi - I am Aman Kumar. I can build elegant and efficient web experiences with strong engineering. I hold a B.E in Information Science and enjoy working across frontend, backend, and automation projects. I like to blend a corporate polish with subtle futuristic touches.",
+  "quickFacts": [
+    { "icon": "fa-graduation-cap", "text": "B.E - Information Science" },
+    { "icon": "fa-code", "text": "Java | JavaScript | Node.js | React" },
+    { "icon": "fa-globe", "text": "Bangalore, India" }
+  ],
+  "skills": [
+    { "icon": "fab fa-js", "label": "JavaScript" },
+    { "icon": "fab fa-react", "label": "React.js" },
+    { "icon": "fab fa-node-js", "label": "Node.js + Express" },
+    { "icon": "fas fa-database", "label": "MongoDB + MySQL" },
+    { "icon": "fab fa-java", "label": "Java + OOP" },
+    { "icon": "fas fa-code", "label": "DSA + REST APIs" }
+  ],
+  "projects": [
+    {
+      "title": "Personalized Diet Recommendation System",
+      "summary": "ML model recommends diet plans from BMI and health indicators.",
+      "details": "Scikit-learn pipeline with data preprocessing, feature selection, and model evaluation.",
+      "tags": ["Python", "Scikit-learn", "ML"],
+      "role": "ML + Backend",
+      "results": "Personalized recommendations for Indian diets.",
+      "github": "https://github.com/Aman110204/personalized-diet-recommendation-system"
+    },
+    {
+      "title": "ERP System",
+      "summary": "ERP modules for authentication, employees, and inventory.",
+      "details": "MVC architecture with JSP and JDBC connectivity to MySQL.",
+      "tags": ["Java", "JSP", "MySQL"],
+      "role": "Backend Developer",
+      "results": "Structured modules and reliable data flow.",
+      "github": "https://github.com/Aman110204/ERP-in-Java"
+    },
+    {
+      "title": "Task Manager Web Application",
+      "summary": "Full-stack MERN app with auth and CRUD workflows.",
+      "details": "Node.js + Express API with MongoDB and a responsive UI.",
+      "tags": ["MERN", "MongoDB", "REST"],
+      "role": "Full-stack Developer",
+      "results": "Secure task management and streamlined workflow.",
+      "github": "https://github.com/Aman110204/Task_Manager"
+    },
+    {
+      "title": "Portfolio Website",
+      "summary": "Responsive portfolio with clean sections and animations.",
+      "details": "HTML, CSS, and JavaScript with a polished, recruiter-friendly layout.",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "role": "Frontend Developer",
+      "results": "Strong personal branding and clear project showcase.",
+      "github": "https://github.com/Aman110204/RESUME"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Web Technology Intern",
+      "company": "Gully Systems Pvt. Ltd., Bangalore",
+      "period": "2024",
+      "summary": "Developed web applications with HTML, CSS, JavaScript, React.js, Node.js; built REST APIs in Express.js. Worked with MongoDB and MySQL, used Git/GitHub, debugged and optimized performance, and followed SDLC and agile practices."
+    }
+  ],
+  "contacts": [
+    {
+      "icon": "fa-solid fa-envelope",
+      "label": "Email",
+      "value": "amankumar110204@gmail.com",
+      "href": "mailto:amankumar110204@gmail.com",
+      "targetBlank": false
+    },
+    {
+      "icon": "fa-brands fa-github",
+      "label": "GitHub",
+      "value": "github.com/Aman110204",
+      "href": "https://github.com/Aman110204",
+      "targetBlank": true
+    },
+    {
+      "icon": "fa-brands fa-linkedin",
+      "label": "LinkedIn",
+      "value": "linkedin.com/in/aman-kumar-b60a04272",
+      "href": "https://www.linkedin.com/in/aman-kumar-b60a04272",
+      "targetBlank": true
+    }
+  ],
+  "customSections": []
+}

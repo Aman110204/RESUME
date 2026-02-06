@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets"
+public_folder: "/assets"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "content"
+        label: "Site Data"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Profile"
+            name: "profile"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Degree", name: "degree", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+          - { label: "About Text", name: "aboutText", widget: "text" }
+          - label: "Quick Facts"
+            name: "quickFacts"
+            widget: "list"
+            fields:
+              - { label: "Icon Class (fa-solid)", name: "icon", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "Icon Class", name: "icon", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Details", name: "details", widget: "text" }
+              - { label: "GitHub URL", name: "github", widget: "string" }
+          - label: "Contacts"
+            name: "contacts"
+            widget: "list"
+            fields:
+              - { label: "Icon Class", name: "icon", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Href", name: "href", widget: "string" }
+              - { label: "Open In New Tab", name: "targetBlank", widget: "boolean", default: false }
