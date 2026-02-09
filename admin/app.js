@@ -1,4 +1,4 @@
-const supabase = window.supabase.createClient(
+const supabaseClient = window.supabase.createClient(
   window.SUPABASE_URL,
   window.SUPABASE_ANON_KEY
 );
@@ -51,14 +51,14 @@ const ui = {
 init();
 
 async function init() {
-  const { data } = await supabase.auth.getSession();
+  const { data } = await supabaseClient.auth.getSession();
   handleSession(data.session);
-  supabase.auth.onAuthStateChange((_event, session) => {
+  supabaseClient.auth.onAuthStateChange((_event, session) => {
     handleSession(session);
   });
 
   ui.loginForm.addEventListener('submit', onLogin);
-  ui.signOutBtn.addEventListener('click', () => supabase.auth.signOut());
+  ui.signOutBtn.addEventListener('click', () => supabaseClient.auth.signOut());
   ui.saveBtn.addEventListener('click', saveContent);
   ui.restoreBtn.addEventListener('click', restoreLastVersion);
   ui.addMetric.addEventListener('click', () => addListItem('metrics'));
@@ -88,13 +88,13 @@ async function onLogin(event) {
   ui.loginStatus.textContent = 'Signing in...';
   const email = ui.loginEmail.value.trim();
   const password = ui.loginPassword.value;
-  const { error } = await supabase.auth.signInWithPassword({ email, password });
+  const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
   ui.loginStatus.textContent = error ? error.message : 'Signed in.';
 }
 
 async function loadContent() {
   ui.saveStatus.textContent = 'Loading...';
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from('site_content')
     .select('data')
     .eq('id', state.siteId)
@@ -177,6 +177,7 @@ function buildFields(type, item, index) {
   } else if (type === 'projects') {
     fields.innerHTML =
       input('Title', item.title, 'title') +
+      input('Image URL', item.image, 'image') +
       textarea('Summary', item.summary, 'summary') +
       textarea('Details', item.details, 'details') +
       input('Tags (comma separated)', (item.tags || []).join(', '), 'tags') +
@@ -248,7 +249,7 @@ function addListItem(type) {
   if (type === 'facts') list.push({ icon: 'fa-graduation-cap', text: 'New fact' });
   if (type === 'metrics') list.push({ value: '0', label: 'New metric' });
   if (type === 'skills') list.push({ icon: 'fab fa-js', label: 'New skill' });
-  if (type === 'projects') list.push({ title: 'New project', summary: '', details: '', tags: [], role: '', results: '', github: '' });
+  if (type === 'projects') list.push({ title: 'New project', image: '', summary: '', details: '', tags: [], role: '', results: '', github: '' });
   if (type === 'experience') list.push({ role: 'New role', company: '', period: '', summary: '' });
   if (type === 'contacts') list.push({ icon: 'fa-solid fa-link', label: 'Link', value: '', href: '', targetBlank: true });
   if (type === 'sections') list.push({ title: 'New section', body: '' });
@@ -277,20 +278,20 @@ async function saveContent() {
   readForm();
   ui.saveStatus.textContent = 'Saving...';
 
-  const { data: current, error: currentError } = await supabase
+  const { data: current, error: currentError } = await supabaseClient
     .from('site_content')
     .select('data')
     .eq('id', state.siteId)
     .single();
 
   if (!currentError && current?.data) {
-    await supabase.from('site_revisions').insert({
+    await supabaseClient.from('site_revisions').insert({
       site_id: state.siteId,
       data: current.data
     });
   }
 
-  const { error } = await supabase
+  const { error } = await supabaseClient
     .from('site_content')
     .upsert({ id: state.siteId, data: state.data }, { onConflict: 'id' });
 
@@ -299,7 +300,7 @@ async function saveContent() {
 
 async function restoreLastVersion() {
   ui.saveStatus.textContent = 'Restoring...';
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from('site_revisions')
     .select('id, data')
     .eq('site_id', state.siteId)
@@ -312,7 +313,7 @@ async function restoreLastVersion() {
   }
 
   const latest = data[0];
-  await supabase
+  await supabaseClient
     .from('site_content')
     .upsert({ id: state.siteId, data: latest.data }, { onConflict: 'id' });
 

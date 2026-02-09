@@ -141,6 +141,9 @@ function applyContent(data) {
       const card = document.createElement('div');
       card.className = 'flip-card project-card reveal';
       card.tabIndex = 0;
+      const imageStyle = project.image
+        ? ` style="background-image:url('${escapeAttr(project.image)}')"`
+        : '';
       const tags = Array.isArray(project.tags)
         ? `<div class="tag-row">${project.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>`
         : '';
@@ -149,7 +152,7 @@ function applyContent(data) {
       card.innerHTML = `
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div class="project-image" aria-hidden="true"></div>
+            <div class="project-image" aria-hidden="true"${imageStyle}></div>
             <h4>${escapeHtml(project.title)}</h4>
             <p>${escapeHtml(project.summary)}</p>
             ${tags}
@@ -277,4 +280,13 @@ function escapeHtml(text) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
+}
+
+function escapeAttr(text) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/'/g, '&#039;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }

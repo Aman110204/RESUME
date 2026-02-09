@@ -195,6 +195,8 @@ h1, h2, h3, h4, .brand-name{
   height:120px;
   border-radius:8px;
   margin-bottom:8px;
+  background-size:cover;
+  background-position:center;
   background:
     linear-gradient(135deg, rgba(15, 94, 240, 0.12), rgba(15, 23, 42, 0.04)),
     repeating-linear-gradient(45deg, rgba(15, 23, 42, 0.05) 0 8px, transparent 8px 16px);

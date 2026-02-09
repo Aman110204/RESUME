@@ -35,6 +35,7 @@
   "projects": [
     {
       "title": "Personalized Diet Recommendation System",
+      "image": "personalized-diet-recommendation.png",
       "summary": "ML model recommends diet plans from BMI and health indicators.",
       "details": "Scikit-learn pipeline with data preprocessing, feature selection, and model evaluation.",
       "tags": ["Python", "Scikit-learn", "ML"],
@@ -44,6 +45,7 @@
     },
     {
       "title": "ERP System",
+      "image": "erp.png",
       "summary": "ERP modules for authentication, employees, and inventory.",
       "details": "MVC architecture with JSP and JDBC connectivity to MySQL.",
       "tags": ["Java", "JSP", "MySQL"],
@@ -53,6 +55,7 @@
     },
     {
       "title": "Task Manager Web Application",
+      "image": "task-manager.png",
       "summary": "Full-stack MERN app with auth and CRUD workflows.",
       "details": "Node.js + Express API with MongoDB and a responsive UI.",
       "tags": ["MERN", "MongoDB", "REST"],
@@ -62,6 +65,7 @@
     },
     {
       "title": "Portfolio Website",
+      "image": "portfolio-website.png",
       "summary": "Responsive portfolio with clean sections and animations.",
       "details": "HTML, CSS, and JavaScript with a polished, recruiter-friendly layout.",
       "tags": ["HTML", "CSS", "JavaScript"],
