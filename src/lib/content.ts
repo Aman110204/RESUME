@@ -1,0 +1,170 @@
+import type { SiteContent } from "./types";
+
+export const seedContent: SiteContent = {
+  profile: {
+    name: "Aman Kumar",
+    degree: "B.E. — Information Science & Engineering",
+    role: "Full Stack Developer",
+  },
+  hero: {
+    eyebrow: "Entry-level Software Engineer · Bangalore, India",
+    headline: "I build and ship REST APIs that hold up in production.",
+    subtitle:
+      "Information Science & Engineering graduate with a strong foundation in Core Java, DSA, and OOP — plus hands-on experience shipping 15+ production REST APIs across a multi-tenant SaaS platform. Comfortable across the stack: Java/Spring Boot, React, Node.js, PostgreSQL and JDBC.",
+    primaryCtaLabel: "View projects",
+    primaryCtaHref: "#projects",
+    secondaryCtaLabel: "Download resume",
+    secondaryCtaHref: "/resume.pdf",
+  },
+  metrics: [
+    { value: "15+", label: "REST APIs shipped" },
+    { value: "4", label: "Full-stack projects" },
+    { value: "25+", label: "LeetCode solved" },
+    { value: "8.0", label: "CGPA / 10" },
+  ],
+  aboutText:
+    "I'm Aman — an Information Science & Engineering graduate based in Bangalore, looking for a Software Engineer / Full Stack Developer role. During my internship at Gully Systems I worked across a real multi-tenant SaaS platform: designing REST APIs, wiring up JWT auth and role-based access control, and debugging PostgreSQL queries under load. Outside of work I like taking a project from a blank schema to a deployed URL — three of the four builds below started as a weekend idea.",
+  quickFacts: [
+    { icon: "fa-graduation-cap", text: "B.E. Information Science & Engineering, 2026" },
+    { icon: "fa-code", text: "Java · Spring MVC · JavaScript · React · Node.js" },
+    { icon: "fa-database", text: "PostgreSQL · JDBC · MySQL · MongoDB" },
+    { icon: "fa-globe", text: "Bangalore, India" },
+  ],
+  skills: [
+    { icon: "fab fa-java", label: "Java (Core, OOP, Collections, Multithreading)" },
+    { icon: "fas fa-leaf", label: "Spring MVC" },
+    { icon: "fas fa-database", label: "JDBC + SQL (PostgreSQL, MySQL)" },
+    { icon: "fas fa-layer-group", label: "MongoDB" },
+    { icon: "fas fa-key", label: "JWT Auth + RBAC" },
+    { icon: "fab fa-react", label: "React.js" },
+    { icon: "fab fa-node-js", label: "Node.js / Express.js" },
+    { icon: "fas fa-vial", label: "Selenium + JUnit (Testing)" },
+    { icon: "fas fa-network-wired", label: "REST API Design" },
+    { icon: "fas fa-code-branch", label: "Git / GitHub" },
+    { icon: "fas fa-diagram-project", label: "Data Structures & Algorithms" },
+    { icon: "fab fa-python", label: "Python (Pandas, Scikit-learn)" },
+  ],
+  projects: [
+    {
+      title: "Gully Connect — Multi-Tenant Alumni Network",
+      image: "portfolio-website.png",
+      summary: "Multi-tenant SaaS alumni platform with isolated PostgreSQL schemas per college.",
+      details:
+        "Architected schema-per-tenant isolation to prevent cross-tenant data leakage, then built and tested 12+ REST APIs with dynamic search, hitting sub-2-second response times. Deployed on Netlify with live usage across multiple colleges.",
+      tags: ["React.js", "Node.js", "Express.js", "PostgreSQL"],
+      role: "Full-Stack Developer",
+      results: "12+ REST APIs, sub-2s response times, live across multiple colleges",
+      github: "https://github.com/Aman110204",
+      method: "GET",
+      path: "/projects/gully-connect",
+      status: "200 OK",
+    },
+    {
+      title: "Placement Management System",
+      image: "task-manager.png",
+      summary: "College placement platform spanning Admin, College, Placement and Student workflows.",
+      details:
+        "Built with a team using Spring MVC and PostgreSQL, structured across User, College, Admin, Placement, and Student modules. Applied MVC architecture and OOP to implement modular, role-based functionality end to end.",
+      tags: ["Java", "Spring MVC", "PostgreSQL"],
+      role: "Backend Developer",
+      results: "Role-based workflows across 5 modules",
+      github: "https://github.com/Aman110204",
+      method: "POST",
+      path: "/projects/placement-system",
+      status: "201 Created",
+    },
+    {
+      title: "ERP System — Inventory & Auth Module",
+      image: "erp.png",
+      summary: "MVC-based inventory and authentication module built on Java Servlets and JDBC.",
+      details:
+        "Solved manual inventory-tracking inefficiencies with a 3NF-normalized MySQL schema. Applied OOP and structured exception handling, and wrote/executed unit and integration tests across the SDLC.",
+      tags: ["Java", "JSP", "JDBC", "MySQL"],
+      role: "Backend Developer",
+      results: "3NF-normalized schema, full unit/integration test coverage",
+      github: "https://github.com/Aman110204/ERP-in-Java",
+      method: "GET",
+      path: "/projects/erp-system",
+      status: "200 OK",
+    },
+    {
+      title: "Personalized Diet Recommendation System",
+      image: "personalized-diet-recommendation.png",
+      summary: "ML pipeline recommending diets from clinical and BMI datasets — B.E. major project.",
+      details:
+        "End-to-end pipeline covering data cleaning, preprocessing, and feature correlation analysis on clinical indicators, reaching 85%+ prediction accuracy for personalized recommendations.",
+      tags: ["Python", "Pandas", "Scikit-learn"],
+      role: "ML + Backend",
+      results: "85%+ prediction accuracy",
+      github: "https://github.com/Aman110204/personalized-diet-recommendation-system",
+      method: "GET",
+      path: "/projects/diet-recommender",
+      status: "200 OK",
+    },
+  ],
+  experience: [
+    {
+      role: "Web Development Intern",
+      company: "Gully Systems Pvt. Ltd., Bangalore",
+      period: "Jan 2026 – Jun 2026",
+      summary:
+        "Engineered and deployed 15+ production REST APIs across a multi-tenant SaaS platform serving multiple colleges.",
+      bullets: [
+        "Built 15+ production REST APIs (Node.js/Express.js) applying OOP and RESTful design across a multi-tenant SaaS platform, following Agile/SDLC practices.",
+        "Implemented JWT-based authentication and RBAC with PostgreSQL schema isolation for secure, tenant-level data management.",
+        "Optimized 20+ SQL queries via systematic debugging and Postman-based testing; ran functional/regression testing before every deployment.",
+      ],
+    },
+  ],
+  certifications: [
+    {
+      name: "Test Engineer — Finishing School for Employability (Grade A)",
+      issuer: "Infosys Foundation / ICT Academy",
+      period: "Aug–Sep 2025",
+      link: "/certs/infosys-test-engineer.pdf",
+    },
+    {
+      name: "C2TC Program — Java with Web Development",
+      issuer: "Accenture & TNS India Foundation",
+      period: "2026",
+      link: "/certs/accenture-tnsif-java-webdev.pdf",
+    },
+    { name: "MongoDB for Developers", issuer: "MongoDB University", period: "Jul 2025" },
+  ],
+  badges: [],
+  achievements: [
+    { text: "2nd Place — RRIT Hackathon (2022)" },
+    { text: "Participant — Comedkars Hackathon (2024)" },
+  ],
+  contacts: [
+    {
+      icon: "fa-solid fa-envelope",
+      label: "Email",
+      value: "aman.kumar.connect110204@gmail.com",
+      href: "mailto:aman.kumar.connect110204@gmail.com",
+      targetBlank: false,
+    },
+    {
+      icon: "fa-solid fa-phone",
+      label: "Phone",
+      value: "+91 8217797687",
+      href: "tel:+918217797687",
+      targetBlank: false,
+    },
+    {
+      icon: "fa-brands fa-github",
+      label: "GitHub",
+      value: "github.com/Aman110204",
+      href: "https://github.com/Aman110204",
+      targetBlank: true,
+    },
+    {
+      icon: "fa-brands fa-linkedin",
+      label: "LinkedIn",
+      value: "linkedin.com/in/amankumar110204",
+      href: "https://linkedin.com/in/amankumar110204",
+      targetBlank: true,
+    },
+  ],
+  customSections: [],
+};
